@@ -1,6 +1,5 @@
 -- bootstrap lazy.nvim, LazyVim and your plugins
 require("config.lazy")
-local builtin = require("telescope.builtin")
 
 -- THEME
 vim.cmd.colorscheme("catppuccin")
@@ -56,4 +55,3 @@ require("catppuccin").setup({
 -- KEYBINDINGS
 vim.keymap.set("n", "<C-s>", ":wa<CR>", { noremap = true, silent = true })
 vim.keymap.set("i", "<C-s>", "<Esc>:wa<CR>a", { noremap = true, silent = true })
-vim.keymap.set("n", "<leader>ff", builtin.live_grep, { desc = "Telescope: Live Grep" })

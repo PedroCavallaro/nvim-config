@@ -2,7 +2,14 @@
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
 --
+
+local telescope = require("telescope.builtin")
 local dap = require("dap")
+
+-- Telescope
+vim.keymap.set("n", "<leader>ff", telescope.live_grep, { desc = "Telescope: Live Grep" })
+
+-- Dap
 vim.keymap.set("n", "<F5>", function()
   dap.continue()
 end, { desc = "Start/Continue Debug" })
